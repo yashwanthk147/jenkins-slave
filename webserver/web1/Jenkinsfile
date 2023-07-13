@@ -1,29 +1,35 @@
 pipeline {
 
-  agent none
+  agent 
     //node { label 'web'}
-    //label 'JAVA'
+    label 'JAVA'
 
   stages{
         
-    stage('MASTER'){
-      agent{
+    stage('Download Dependencies'){
+      //agent{
         //node {label 'Built-In Node'}
-        label 'MASTER'
-      }
+        //label 'MASTER'
+      //}
       steps{
-        sh 'echo Hello'
+        sh 'echo Download Dependencies'
         
       }
     }
 
-    stage('Agent NODE') {
-      agent {
+    stage('Find Bugs') {
+      //agent {
         //node {label 'web'}
-        label 'JAVA'
-      }
+        //label 'JAVA'
+      //}
       steps{
-        sh 'echo HELLO'
+        sh 'echo Find Bugs'
+      }
+    }
+
+    stage('Test cases'){
+      steps{
+        sh 'echo Test cases'
       }
     }
   }
