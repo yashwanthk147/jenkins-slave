@@ -9,7 +9,7 @@ pipeline {
         
     stage('MASTER'){
       agent{
-        node {label 'master'}
+        node {label 'Built-In Node'}
       }
       steps{
         sh 'echo Hello'
