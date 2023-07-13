@@ -1,10 +1,8 @@
 pipeline {
 
-  agent {
+  agent none
     //node { label 'web'}
     //label 'JAVA'
-    none
-  }
 
   stages{
         
