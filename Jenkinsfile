@@ -1,14 +1,17 @@
 pipeline {
 
-    agents{
-        node { label 'web'}
+  agents{
+    node { label 'web'}
+  }
+
+  stages{
+        
+    stage('one'){
+      steps{
+        sh echo 'Hello'
+        
+      }
     }
-    stages{
-        stage{
-            steps{
-                echo 'Hello'
-            }
-        }
-    }
+  }
 
 }
