@@ -11,14 +11,14 @@ pipelineJob('CI-Pipelines/Jenkins') {
           'hudson.plugins.git.UserRemoteConfig' {
             'url'('https://github.com/yashwanthk147/jenkins-slave.git')
           }
-       }
+        }
         'branches' {
           'hudson.plugins.git.BranchSpec' {
             'name'('*/main')
           }
         }
       }
-      'scriptPath'('Jenkinsfile')
+      'scriptPath'('CI-Pipelines/Jenkinsfile')
       'lightweight'(true)
     }
   }
