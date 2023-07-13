@@ -1,6 +1,6 @@
 pipeline {
 
-  agents{
+  agent {
     node { label 'web'}
   }
 
