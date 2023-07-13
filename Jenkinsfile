@@ -2,14 +2,16 @@ pipeline {
 
   agent {
     //node { label 'web'}
-    label 'JAVA'
+    //label 'JAVA'
+    none
   }
 
   stages{
         
     stage('MASTER'){
       agent{
-        node {label 'Built-In Node'}
+        //node {label 'Built-In Node'}
+        label 'MASTER'
       }
       steps{
         sh 'echo Hello'
@@ -19,7 +21,8 @@ pipeline {
 
     stage('Agent NODE') {
       agent {
-        node {label 'web'}
+        //node {label 'web'}
+        label 'JAVA'
       }
       steps{
         sh 'echo HELLO'
